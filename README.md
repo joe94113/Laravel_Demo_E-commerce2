@@ -36,5 +36,4 @@
 
 #### SQL架構
 
-![SQL Scheme](e-commerce.png)
-"# Laravel_Demo_E-commerce2" 
+![SQL Scheme](e-commerce.png) 
