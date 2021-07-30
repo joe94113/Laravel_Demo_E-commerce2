@@ -30,7 +30,9 @@
 
 #### Youtube DEMO
 
-[Youtube Demo Link](https://youtu.be/ZmNn5XDHOxI) 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=ZmNn5XDHOxI
+" target="_blank"><img src="http://img.youtube.com/vi/ZmNn5XDHOxI/0.jpg" 
+alt="Youtube DEMO" width="400" height="300" border="10" /></a>
 
 #### SQL架構
 
