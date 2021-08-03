@@ -141,6 +141,7 @@ return [
          */
         Yajra\DataTables\ButtonsServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,

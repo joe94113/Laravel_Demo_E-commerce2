@@ -5,10 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Cart;
-
+use APP\Http\Services\CartService;
 
 class CartController extends Controller
 {
+    protected $cartService;
+
+    public function __construct(CartService $cartService)
+    {
+        $this->cartService = $cartService;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -37,7 +43,7 @@ class CartController extends Controller
         $user = auth()->user();
         $cart = $user->carts()->where('checkouted', false)->with('cartItems')->first();
         if($cart){
-            $result = $cart->checkout();
+            $result = $this->cartService->checkout($cart);
             return response($result);
         }
         else{

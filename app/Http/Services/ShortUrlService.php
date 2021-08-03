@@ -5,7 +5,8 @@ use Error;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Log;
 
-class ShortUrlService{
+class ShortUrlService implements ShortUrlInterfaceService
+{
     protected $client;
     public function __construct()
     {
@@ -32,11 +33,11 @@ class ShortUrlService{
             Log::channel('url_shorten')->info('responseData', ['data' => $contents]); // 儲存Log
 
             $contents = json_decode($contents);
-            return $contents->data->picseeUrl;
+            $url = $contents->data->picseeUrl;
         } catch (\Throwable $th) {
             report($th);
             return $url;
         }
-        
+        return $url;
     }
 }
