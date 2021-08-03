@@ -13,7 +13,7 @@ use Facebook\WebDriver\Remote\DesiredCapabilities;
 
 class ExampleTest extends DuskTestCase
 {
-    use DatabaseMigrations;
+    use DatabaseMigrations; // 執行測試前，會先 rollback ，再重新 migrate
     /**
      * A basic browser test example.
      *
