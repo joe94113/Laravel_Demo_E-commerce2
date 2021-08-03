@@ -1,31 +1,39 @@
-### 實作具電商功能 API Server
-### 實作出一個 API 應用程式，並具有基本電商的購物和會員功能。
+### 做出一個前台資料顯示 + 後台管理的網站。
 
 #### 功能列表:
 
-1. Cart 購物車功能，可以建立、讀取、編輯( 添加產品 )和移除產品
+1. Notification 通知站內信
 
-2. Auth 會員註冊、登入與登出功能
+2. Queue 佇列排程
 
-3. 結帳功能 + VIP 優惠 + 商品數量檢查防呆
+3. Redis 資料讀取緩衝
 
+4. Observer 做資料監控自行調整
 
+5. HTTP 串接短網址服務
 
-#### 系統功能:
+6. File 檔案上傳
 
-1. 使用 Eloquent Model 完成功能
+7. Error Exception 錯誤管理
 
-2. 有使用軟刪除特性
+8. Log 日誌紀錄
 
-3. 有資料 Validator
+9. Excel 單表匯入與匯出
 
-4. 有資料預產生器 Seeder
+10. Excel 多表匯出與客製格式化
 
-#### Postman作品DEMO
+11. Controller 單元測試
 
-[Youtube Demo Link](https://youtu.be/etI1WYAiy9A) 
+12. Factory 產生假資料
+
+13. 整合測試
+
+#### Youtube DEMO
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=ZmNn5XDHOxI
+" target="_blank"><img src="http://img.youtube.com/vi/ZmNn5XDHOxI/0.jpg" 
+alt="Youtube DEMO" width="400" height="300" border="10" /></a>
 
 #### SQL架構
 
-![SQL Scheme](e-commerce.png)
-"# Laravel_Demo_E-commerce2" 
+![SQL Scheme](e-commerce.png) 
