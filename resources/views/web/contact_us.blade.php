@@ -1,14 +1,22 @@
 @extends('layout.app')
 @section('content')
-<h3>聯絡我們</h3>
-<form action="">
-    請問你是: <input name="name" type="text"> <br>
-    請問你的消費時間: <input name="date" type="date"> <br>
-    你消費的商品種類:
-    <select name="product" id="">
+<form class="w-50" action="">
+  <div class="mb-3">
+    <label for="" class="form-label">請問你是:</label>
+    <input type="text" class="form-control" name="name" aria-describedby="">
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">請問您消費的時間</label>
+    <input type="date" name="date" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+      <label for="disabledSelect" class="form-label">您消費種類:</label>
+      <select name="product" id="disabledSelect" class="form-select">
         <option value="物品">物品</option>
         <option value="食物">食物</option>
-    </select>
-    <button class="btn btn-primary">送出</button>
+      </select>
+    </div>
+  <button type="submit" class="btn btn-primary">送出</button>
 </form>
 @endsection
+

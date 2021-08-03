@@ -4,7 +4,7 @@
 <h2>後台-訂單列表</h2>
 <sapn>訂單總數: {{ $orderCount }}</sapn>
 <div>
-    <a class="a_nav" href="/admin/orders/excel/export">匯出訂單 Excel</a>
+    <a class="a_nav" href="/admin/orders/excel/export">匯出訂單 Excel</a><br>
     <a class="a_nav" href="/admin/orders/excel/export-by-shipped">匯出分類訂單 Excel</a>
 </div>
 <table>

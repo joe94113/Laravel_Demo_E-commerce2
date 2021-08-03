@@ -25,6 +25,7 @@ Route::group(['middleware' => 'check.dirty'], function(){
 Route::post('/products/check-product', 'ProductController@checkProduct'); // 確認商品數量
 Route::get('/products/{id}/shared-url', 'ProductController@sheredUrl'); // 縮短網址api
 
+Route::get('/admin/orders/datatable', 'Admin\OrderController@datatable'); // datatable
 Route::resource('/admin/orders', 'Admin\OrderController'); // 後台訂單
 Route::resource('/admin/products', 'Admin\ProductController'); // 後台產品
 Route::post('/admin/products/upload-image', 'Admin\ProductController@uploadImage'); // 上傳圖片

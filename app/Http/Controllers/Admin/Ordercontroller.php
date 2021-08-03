@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\DataTables\OrdersDataTable;
 use App\Exports\OrdersExport;
 use App\Exports\OrdersMultipleExport;
 use App\Models\Order;
@@ -47,5 +48,10 @@ class Ordercontroller extends Controller
     public function exportByShipped()
     {
         return Excel::download(new OrdersMultipleExport, 'orders_by_shipped.xlsx');
+    }
+
+    public function datatable(OrdersDataTable $dataTable)
+    {
+        return $dataTable->render('admin.orders.datatable');
     }
 }

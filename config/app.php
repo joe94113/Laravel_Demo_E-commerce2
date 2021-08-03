@@ -139,6 +139,8 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+        Yajra\DataTables\ButtonsServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,

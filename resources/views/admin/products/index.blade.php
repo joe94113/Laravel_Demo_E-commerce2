@@ -36,7 +36,7 @@
             <td>{{ $product->price }}</td>
             <td>{{ $product->quantity }}</td>
             <td><a class="a_nav" href="{{ $product->image_url }}">圖片連結</a></td>
-            <td><input type="button" class="upload_image" data-id={{$product->id}} value="上傳圖片"></td>
+            <td><input type="button" class="upload_image btn-circle" data-id={{$product->id}} value="上傳圖片"></td>
         </tr>
         @endforeach
     </tbody>
