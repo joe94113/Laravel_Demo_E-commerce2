@@ -37,3 +37,9 @@ alt="Youtube DEMO" width="400" height="300" border="10" /></a>
 #### SQL架構
 
 ![SQL Scheme](e-commerce.png) 
+
+#### 部屬GCP
+
+![index](主頁.png) 
+
+![admin](管理頁面.png) 
