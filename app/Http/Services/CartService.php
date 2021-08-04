@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Http\Services;
+namespace app\Http\Services;
+
 use Illuminate\Support\Facades\DB;
 
 class CartService
@@ -33,7 +34,7 @@ class CartService
 
     public function checkLackCartItem($cartItems) // 確認商品數量
     {
-        return $cartItems->fillter(function ($cartItem) {
+        return $cartItems->filter(function ($cartItem) {
             return $cartItem->product->quantity < $cartItem->quantity; // 如果購物車數量大於產品數量
         })->first();
     }
@@ -44,13 +45,13 @@ class CartService
         return $cart->user->level == self::VIP_LEVEL ? self::VIP_RATE : self::NORMAL_RATE;
     }
     
-    public function createOrder($cart, $rate)
+    public function createOrder($cart, $rate)  // 創建訂單
     {
         $order = $cart->order()->create([
             'user_id' => $cart->user_id
         ]);
 
-        foreach($this->cartItems as $cartItem){
+        foreach($cart->cartItems as $cartItem){
             $order->orderItems()->create([
                 'product_id' => $cartItem->product_id,
                 'price' => $cartItem->product->price * $rate

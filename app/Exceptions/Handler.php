@@ -56,7 +56,8 @@ class Handler extends ExceptionHandler
         });
 
         $this->renderable(function(Throwable $e){
-            return response()->view('error');
+            // return response()->view('error');
+            return response($e);
         });
     }
     // 覆寫
